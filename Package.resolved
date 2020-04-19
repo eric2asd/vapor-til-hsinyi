@@ -2,6 +2,33 @@
   "object": {
     "pins": [
       {
+        "package": "Auth",
+        "repositoryURL": "https://github.com/vapor/auth.git",
+        "state": {
+          "branch": null,
+          "revision": "e6f61b403727ec124214beb3e57deff579f31d00",
+          "version": "2.0.4"
+        }
+      },
+      {
+        "package": "AWSSDKSwift",
+        "repositoryURL": "https://github.com/swift-aws/aws-sdk-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "33d049047309b3ed108f0c3ef1570fcab9296a9e",
+          "version": "3.5.0"
+        }
+      },
+      {
+        "package": "AWSSDKSwiftCore",
+        "repositoryURL": "https://github.com/swift-aws/aws-sdk-swift-core.git",
+        "state": {
+          "branch": null,
+          "revision": "31aa9a8310007b6cb7ed0c68cb01f54fe962ca66",
+          "version": "3.5.0"
+        }
+      },
+      {
         "package": "Console",
         "repositoryURL": "https://github.com/vapor/console.git",
         "state": {
@@ -42,8 +69,17 @@
         "repositoryURL": "https://github.com/vapor/fluent.git",
         "state": {
           "branch": null,
-          "revision": "b915c321c6f9e83743ee5efa35a30895e1b02e51",
-          "version": "3.2.0"
+          "revision": "783819d8838d15e1a05b459aa0fd1bde1e37ac26",
+          "version": "3.2.1"
+        }
+      },
+      {
+        "package": "FluentPostgreSQL",
+        "repositoryURL": "https://github.com/vapor/fluent-postgresql.git",
+        "state": {
+          "branch": null,
+          "revision": "8e3eb9d24d54ac58c8d04c194ad6b24f0b1b667e",
+          "version": "1.0.0"
         }
       },
       {
@@ -65,6 +101,42 @@
         }
       },
       {
+        "package": "HypertextApplicationLanguage",
+        "repositoryURL": "https://github.com/swift-aws/HypertextApplicationLanguage.git",
+        "state": {
+          "branch": null,
+          "revision": "aa2c9141d491682f17b2310aed17b9adfc006256",
+          "version": "1.1.1"
+        }
+      },
+      {
+        "package": "Imperial",
+        "repositoryURL": "https://github.com/vapor-community/Imperial.git",
+        "state": {
+          "branch": null,
+          "revision": "98fc3f229138ec2781b09a0a883afb50df1f1992",
+          "version": "0.16.0"
+        }
+      },
+      {
+        "package": "JWT",
+        "repositoryURL": "https://github.com/vapor/jwt.git",
+        "state": {
+          "branch": null,
+          "revision": "03c8c11f9dd895de2e8edc451a6e375409146a55",
+          "version": "3.1.2"
+        }
+      },
+      {
+        "package": "Leaf",
+        "repositoryURL": "https://github.com/vapor/leaf.git",
+        "state": {
+          "branch": null,
+          "revision": "d35f54cbac723e673f9bd5078361eea74049c8d7",
+          "version": "3.0.2"
+        }
+      },
+      {
         "package": "Multipart",
         "repositoryURL": "https://github.com/vapor/multipart.git",
         "state": {
@@ -74,12 +146,39 @@
         }
       },
       {
+        "package": "INIParser",
+        "repositoryURL": "https://github.com/swift-aws/Perfect-INIParser.git",
+        "state": {
+          "branch": null,
+          "revision": "42de0efc7a01105e19b80d533d3d282a98277f6c",
+          "version": "3.0.3"
+        }
+      },
+      {
+        "package": "PostgreSQL",
+        "repositoryURL": "https://github.com/vapor/postgresql.git",
+        "state": {
+          "branch": null,
+          "revision": "489537a4bd59afb9e162e9c7d423623a748b5ec0",
+          "version": "1.6.0"
+        }
+      },
+      {
         "package": "Routing",
         "repositoryURL": "https://github.com/vapor/routing.git",
         "state": {
           "branch": null,
           "revision": "d76f339c9716785e5079af9d7075d28ff7da3d92",
           "version": "3.1.0"
+        }
+      },
+      {
+        "package": "SendGrid",
+        "repositoryURL": "https://github.com/vapor-community/sendgrid.git",
+        "state": {
+          "branch": null,
+          "revision": "4fca9d02fee4f343666e73651fedd4d26ed048e8",
+          "version": "3.0.6"
         }
       },
       {
