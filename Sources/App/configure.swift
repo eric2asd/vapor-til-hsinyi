@@ -27,27 +27,35 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
   // Configure a SQLite database
   // Register the configured SQLite database to the database config.
   var databases = DatabasesConfig()
-  let hostname = Environment.get("DATABASE_HOSTNAME") ?? "localhost"
-  let databaseName: String
-  let databasePort: Int
-  if env == .testing {
-    databaseName = "vapor-test"
-    if let testPort = Environment.get("DATABASE_PORT") {
-      databasePort = Int(testPort) ?? 5433
-    } else {
-      databasePort = 5433
-    }
+  let databaseConfig: PostgreSQLDatabaseConfig
+  if let url = Environment.get("DATABASE_URL") {
+    databaseConfig = PostgreSQLDatabaseConfig(url: url)!
   } else {
-    databaseName = "vapor"
-    databasePort = 5432
+    
+    let hostname = Environment.get("DATABASE_HOSTNAME") ?? "localhost"
+    let databaseName: String
+    let databasePort: Int
+    if env == .testing {
+      databaseName = "vapor-test"
+      if let testPort = Environment.get("DATABASE_PORT") {
+        databasePort = Int(testPort) ?? 5433
+      } else {
+        databasePort = 5433
+      }
+    } else {
+      databaseName = "vapor"
+      databasePort = 5432
+    }
+    
+      databaseConfig = PostgreSQLDatabaseConfig(
+      hostname: hostname,
+      port: databasePort,
+      username: "vapor",
+      database: databaseName,
+      password: "password")
+    
+    
   }
-  
-  let databaseConfig = PostgreSQLDatabaseConfig(
-    hostname: hostname,
-    port: databasePort,
-    username: "vapor",
-    database: databaseName,
-    password: "password")
   let database = PostgreSQLDatabase(config: databaseConfig)
   databases.add(database: database, as: .psql)
   
@@ -92,16 +100,16 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
   
   //1
   guard let accessKeyId = Environment.get("AWS_KEY_ID"),
-        let secretKey = Environment.get("AWS_SECRET_KEY") else {
-    fatalError("No AWS Key specified")
+    let secretKey = Environment.get("AWS_SECRET_KEY") else {
+      fatalError("No AWS Key specified")
   }
-
+  
   //2
   let snsSender = AWSSNSSender(accessKeyID: accessKeyId,
                                secretAccessKey: secretKey,
                                senderId: "TILAPP")
   //3
   services.register(snsSender, as: SMSSender.self)
-
+  
 }
 
