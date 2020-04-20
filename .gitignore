@@ -6,3 +6,7 @@ DerivedData/
 .DS_Store
 .swiftpm
 db.sqlite
+Dockerfile
+docker-compose.production.yml
+docker-compose.yml
+production.Dockerfile
